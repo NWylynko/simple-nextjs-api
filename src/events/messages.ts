@@ -1,4 +1,4 @@
-const {PubSub} = require('@google-cloud/pubsub');
+import { PubSub } from '@google-cloud/pubsub';
 
 const subscriptionName = 'simple-web-app-sub';
 
