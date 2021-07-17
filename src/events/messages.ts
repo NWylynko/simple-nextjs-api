@@ -11,7 +11,7 @@ export function listenForMessages() {
   // Create an event handler to handle messages
   let messageCount = 0;
   
-  const messageHandler = message => {
+  const messageHandler = (message: any) => {
     console.log(`Received message ${message.id}:`);
     console.log(`\tData: ${message.data}`);
     console.log(`\tAttributes: ${message.attributes}`);
