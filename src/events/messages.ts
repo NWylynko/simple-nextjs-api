@@ -24,6 +24,6 @@ export function listenForMessages() {
   // Listen for new messages until timeout is hit
   subscription.on('message', messageHandler);
 
-  return subscription.removeListener('message', messageHandler);
+  return () => subscription.removeListener('message', messageHandler);
 
 }
