@@ -1,7 +1,9 @@
 import { FastifyRequest, FastifyReply } from "fastify";
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
 
 export const getMessages = async () => {
-  return { hello: "world 2" };
+  return prisma.message.findMany()
 };
 
 export const getMessagesHandler = async (

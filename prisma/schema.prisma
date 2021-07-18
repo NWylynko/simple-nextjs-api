@@ -9,3 +9,9 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model Message {
+  id        String   @id @default(uuid())
+  timestamp DateTime
+  message   String
+}
