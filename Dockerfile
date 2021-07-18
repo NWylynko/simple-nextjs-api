@@ -13,5 +13,6 @@ WORKDIR /var/www/simple-api
 COPY --from=builder /var/www/simple-api/dist ./dist
 COPY package.json yarn.lock ./
 RUN yarn install
+RUN yarn prisma generate
 EXPOSE 4000
 CMD yarn start
